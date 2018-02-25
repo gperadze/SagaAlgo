@@ -1,0 +1,28 @@
+﻿Build started 2/24/2018 9:40:58 PM.
+     1>Project "C:\Saga\Algo\Algo\Algo\Algo.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Algo.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files\boost\boost_1_47_0" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt SerializationDemo.cpp
+         SerializationDemo.cpp
+     1>c:\program files\boost\boost_1_47_0\boost\archive\tmpdir.hpp(35): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(433) : see declaration of 'getenv'
+     1>c:\program files\boost\boost_1_47_0\boost\archive\tmpdir.hpp(37): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(433) : see declaration of 'getenv'
+     1>c:\program files\boost\boost_1_47_0\boost\archive\tmpdir.hpp(39): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(433) : see declaration of 'getenv'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Saga\Algo\Algo\Debug\Algo.exe" /NOLOGO /LIBPATH:"C:\Program Files\boost\boost_1_47_0\stage\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Algo.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Saga\Algo\Algo\Debug\Algo.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Saga\Algo\Algo\Debug\Algo.lib" /MACHINE:X86 Debug\SerializationDemo.obj
+         LINK : C:\Saga\Algo\Algo\Debug\Algo.exe not found or not built by the last incremental link; performing full link
+            Creating library C:\Saga\Algo\Algo\Debug\Algo.lib and object C:\Saga\Algo\Algo\Debug\Algo.exp
+         Algo.vcxproj -> C:\Saga\Algo\Algo\Debug\Algo.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Saga\Algo\Algo\Debug\Algo.exe;#1" /manifest Debug\Algo.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Algo.unsuccessfulbuild".
+         Touching "Debug\Algo.lastbuildstate".
+     1>Done Building Project "C:\Saga\Algo\Algo\Algo\Algo.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.18
