@@ -6,6 +6,16 @@
 #include <boost/archive/xml_iarchive.hpp>
 
 #include "SerializationDemo.h"
+#include "Quarks.h"
+
+void save_gps(const gps_position &s, const char * filename){
+    // make an archive
+    std::ofstream ofs(filename);
+    assert(ofs.good());
+    boost::archive::xml_oarchive oa(ofs);
+    oa << BOOST_SERIALIZATION_NVP(s);
+}
+
 
 
 void save_schedule(const bus_schedule &s, const char * filename){
@@ -29,8 +39,34 @@ restore_schedule(bus_schedule &s, const char * filename)
     ia >> BOOST_SERIALIZATION_NVP(s);
 }
 
+
+void
+restore_gps(gps_position &s, const char * filename)
+{
+    // open the archive
+    std::ifstream ifs(filename);
+    assert(ifs.good());
+    boost::archive::xml_iarchive ia(ifs);
+
+    // restore the schedule from the archive
+    ia >> BOOST_SERIALIZATION_NVP(s);
+}
+
+
+
+
 int main(int argc, char *argv[])
 {   
+	gps_position gps(34, 135, 52.560f);
+
+    std::string f("C:\\Saga\\Algo\\Algo\\Data\\GPS.xvl"); 
+
+    // save the schedule
+    save_gps(gps, f.c_str());
+	gps_position new_gps;
+	restore_gps(new_gps, f.c_str());
+
+
     // make the schedule
     bus_schedule original_schedule;
 
@@ -96,5 +132,18 @@ int main(int argc, char *argv[])
     delete bs1;
     delete bs2;
     delete bs3;
+
+
+	std::string fn("C:\\Saga\\Algo\\Algo\\Data\\Quark.xvl"); 
+	GQuarks::BQuark* q = new GQuarks::BQuark( GQuarks::EShape::kSCircle,
+											 GQuarks::ESize::kSzLarge, 
+		                                     GQuarks::EColor::kCGreen);
+
+	GQuarks::save_quark(*q,fn.c_str() );
+
+	GQuarks::BQuark q1;
+	GQuarks::restore_quark( q1, fn.c_str());
+
+
     return 0;
 }
